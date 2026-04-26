@@ -177,6 +177,24 @@ function shake(el) {
   setTimeout(() => el.style.animation = '', 400);
 }
 
+// ── MESSENGER POPUP ──
+function openMessenger(e) {
+  e.preventDefault();
+  const url = 'https://m.me/1XnyL2hAM1';
+  const w = 420, h = 640;
+  const left = Math.round((screen.width  - w) / 2);
+  const top  = Math.round((screen.height - h) / 2);
+  const popup = window.open(
+    url,
+    'MessengerChat',
+    `width=${w},height=${h},left=${left},top=${top},toolbar=no,menubar=no,scrollbars=yes,resizable=yes`
+  );
+  // fallback: if popup blocked, open in new tab
+  if (!popup || popup.closed) {
+    window.open(url, '_blank');
+  }
+}
+
 // ── CHAT BUBBLE ──
 chatBtn.addEventListener('click', () => {
   chatPanel.classList.toggle('open');
