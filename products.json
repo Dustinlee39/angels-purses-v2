@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Golden Hour Tote",
+    "description": "Structured silhouette with gold-tone hardware and rich interior lining. A statement piece for any occasion.",
+    "image": "images/purse1.jpg",
+    "messenger": "https://m.me/YOURPAGE",
+    "phone": "+10000000000"
+  },
+  {
+    "id": 2,
+    "name": "Midnight Mini Crossbody",
+    "description": "Compact and chic with an adjustable strap. Fits your essentials without sacrificing style.",
+    "image": "images/purse2.jpg",
+    "messenger": "https://m.me/YOURPAGE",
+    "phone": "+10000000000"
+  },
+  {
+    "id": 3,
+    "name": "Blush Quilted Clutch",
+    "description": "Soft quilted leather with a twist-lock closure. Perfect for evenings out.",
+    "image": "images/purse3.jpg",
+    "messenger": "https://m.me/YOURPAGE",
+    "phone": "+10000000000"
+  },
+  {
+    "id": 4,
+    "name": "Cognac Bucket Bag",
+    "description": "Relaxed bucket silhouette in warm cognac. Drawstring top with a removable pouch inside.",
+    "image": "images/purse4.jpg",
+    "messenger": "https://m.me/YOURPAGE",
+    "phone": "+10000000000"
+  },
+  {
+    "id": 5,
+    "name": "Ivory Chain Shoulder Bag",
+    "description": "Elegant ivory with a layered chain strap. Timeless design that pairs with everything.",
+    "image": "images/purse5.jpg",
+    "messenger": "https://m.me/YOURPAGE",
+    "phone": "+10000000000"
+  },
+  {
+    "id": 6,
+    "name": "Emerald City Satchel",
+    "description": "Deep emerald green structured satchel with double top handles and a detachable strap.",
+    "image": "images/purse6.jpg",
+    "messenger": "https://m.me/YOURPAGE",
+    "phone": "+10000000000"
+  },
+  {
+    "id": 7,
+    "name": "Caramel Woven Tote",
+    "description": "Handwoven texture in warm caramel tones. Spacious interior — your everyday luxury companion.",
+    "image": "images/purse7.jpg",
+    "messenger": "https://m.me/YOURPAGE",
+    "phone": "+10000000000"
+  },
+  {
+    "id": 8,
+    "name": "Noir Envelope Clutch",
+    "description": "Sleek and minimal. Matte black envelope with a magnetic snap. Goes anywhere, fits everything that matters.",
+    "image": "images/purse8.jpg",
+    "messenger": "https://m.me/YOURPAGE",
+    "phone": "+10000000000"
+  },
+  {
+    "id": 9,
+    "name": "Rose Gold Zip-Around",
+    "description": "Zip-around wallet bag with a rose gold zipper pull. Function meets glamour.",
+    "image": "images/purse9.jpg",
+    "messenger": "https://m.me/YOURPAGE",
+    "phone": "+10000000000"
+  },
+  {
+    "id": 10,
+    "name": "Dusty Mauve Hobo",
+    "description": "Slouchy hobo silhouette in dusty mauve. Soft leather with a vintage-modern feel.",
+    "image": "images/purse10.jpg",
+    "messenger": "https://m.me/YOURPAGE",
+    "phone": "+10000000000"
+  },
+  {
+    "id": 11,
+    "name": "Tortoise Frame Bag",
+    "description": "Structured frame bag with tortoise-shell kiss-lock closure. Retro-luxe and completely unique.",
+    "image": "images/purse11.jpg",
+    "messenger": "https://m.me/YOURPAGE",
+    "phone": "+10000000000"
+  },
+  {
+    "id": 12,
+    "name": "Champagne Flap Bag",
+    "description": "Champagne shimmer with a layered flap and hidden magnetic closure. Made for celebration.",
+    "image": "images/purse12.jpg",
+    "messenger": "https://m.me/YOURPAGE",
+    "phone": "+10000000000"
+  }
+]
