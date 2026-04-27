@@ -1,9 +1,10 @@
 import { state } from '../state.js';
-import { saveOffers, loadOffers } from './storage.js';
+import { save, load, StorageKeys } from './storage.js';
 import { lockProduct } from './lock.js';
+import { syncAll } from './sync.js';
 
 export function initOffers() {
-  state.offers = loadOffers();
+  state.offers = load(StorageKeys.OFFERS, []);
 }
 
 export function addOffer(offer) {
@@ -19,5 +20,5 @@ export function addOffer(offer) {
     lockProduct(offer.productId);
   }
 
-  saveOffers(state.offers);
+  syncAll();
 }

@@ -1,6 +1,10 @@
 import { state } from '../state.js';
+import { save, load, StorageKeys } from './storage.js';
 
 export function updateStatusFromOffers() {
+  const saved = load(StorageKeys.STATUS, {});
+  state.status = saved;
+
   state.products.forEach(p => {
     const related = state.offers.filter(o => o.productId === p.id);
 
@@ -12,4 +16,6 @@ export function updateStatusFromOffers() {
       state.status[p.id] = "available";
     }
   });
+
+  save(StorageKeys.STATUS, state.status);
 }
