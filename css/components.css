@@ -3,3 +3,15 @@
 .card-body { padding:10px; }
 .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.6); display:flex; align-items:center; justify-content:center; }
 .modal { background:#fff; padding:20px; width:90%; max-width:500px; border-radius:10px; }
+
+.status {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 10px;
+  padding: 4px 6px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

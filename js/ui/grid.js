@@ -1,5 +1,6 @@
 import { safeImage } from './images.js';
 import { batchRender } from './renderQueue.js';
+import { getStatus } from './productStatus.js';
 
 export function renderGrid(products, onSelect) {
   const grid = document.getElementById('grid');
@@ -10,10 +11,13 @@ export function renderGrid(products, onSelect) {
   batchRender(products, (p) => {
     if (!p?.name) return;
 
+    const status = getStatus(p.id);
+
     const card = document.createElement('div');
     card.className = 'card';
 
     card.innerHTML = `
+      <div class="status">${status}</div>
       <img src="${safeImage(p.image)}" loading="lazy"/>
       <div class="card-body">
         <h3>${p.name}</h3>

@@ -1,4 +1,5 @@
 import { validateOffer } from './validation.js';
+import { addOffer } from './offers.js';
 
 export function bindOfferForm(onSubmit) {
   const form = document.getElementById('offer-form');
@@ -14,12 +15,9 @@ export function bindOfferForm(onSubmit) {
       contact: form.contact?.value
     };
 
-    if (!validateOffer(data)) {
-      form.classList.add('error');
-      setTimeout(() => form.classList.remove('error'), 400);
-      return;
-    }
+    if (!validateOffer(data)) return;
 
+    addOffer(data);
     onSubmit(data);
     form.reset();
   });
