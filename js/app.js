@@ -6,6 +6,7 @@ import { bindOfferForm } from './ui/form.js';
 import { initOffers } from './ui/offers.js';
 import { updateStatusFromOffers } from './ui/statusEngine.js';
 import { logEvent } from './ui/audit.js';
+import { initAdminEntry } from './ui/adminEntry.js';
 
 async function init() {
   const data = await fetchProducts();
@@ -14,6 +15,8 @@ async function init() {
 
   initOffers();
   updateStatusFromOffers();
+
+  initAdminEntry();
 
   renderGrid(state.products, (p) => {
     state.selectedProduct = p;
