@@ -1,1 +1,4 @@
-export const state = { products: [], selectedProduct: null };
+export const state = {
+  products: [],
+  selectedProduct: null
+};
