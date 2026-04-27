@@ -1,10 +1,10 @@
-let open = false;
+import { modalState } from './modalState.js';
 
 export function openModal(product) {
   const root = document.getElementById('modal');
-  if (!root || !product || open) return;
+  if (!root || !product || modalState.open) return;
 
-  open = true;
+  modalState.open = true;
 
   root.innerHTML = `
     <div class="modal-overlay">
@@ -20,13 +20,13 @@ export function openModal(product) {
   const overlay = root.querySelector('.modal-overlay');
   const close = root.querySelector('.close');
 
-  const shut = () => {
+  const closeFn = () => {
     root.innerHTML = '';
-    open = false;
+    modalState.open = false;
   };
 
-  close.onclick = shut;
+  close.onclick = closeFn;
   overlay.onclick = (e) => {
-    if (e.target === overlay) shut();
+    if (e.target === overlay) closeFn();
   };
 }

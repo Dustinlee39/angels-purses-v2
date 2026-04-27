@@ -4,6 +4,7 @@ import { batchRender } from './renderQueue.js';
 export function renderGrid(products, onSelect) {
   const grid = document.getElementById('grid');
   if (!grid) return;
+
   grid.innerHTML = '';
 
   batchRender(products, (p) => {
