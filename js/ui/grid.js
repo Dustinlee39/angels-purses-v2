@@ -1,6 +1,7 @@
 import { safeImage } from './images.js';
 import { batchRender } from './renderQueue.js';
 import { getStatus } from './productStatus.js';
+import { isLocked } from './lock.js';
 
 export function renderGrid(products, onSelect) {
   const grid = document.getElementById('grid');
@@ -12,9 +13,13 @@ export function renderGrid(products, onSelect) {
     if (!p?.name) return;
 
     const status = getStatus(p.id);
+    const locked = isLocked(p.id);
 
     const card = document.createElement('div');
     card.className = 'card';
+
+    card.style.opacity = locked ? '0.6' : '1';
+    card.style.pointerEvents = locked ? 'none' : 'auto';
 
     card.innerHTML = `
       <div class="status">${status}</div>
