@@ -7,17 +7,16 @@ import { initOffers } from './ui/offers.js';
 import { updateStatusFromOffers } from './ui/statusEngine.js';
 import { logEvent } from './ui/audit.js';
 import { initAdminEntry } from './ui/adminEntry.js';
-import { StorageKeys, load } from './ui/storage.js';
+import { ENV } from './core/env.js';
+import { log } from './core/logger.js';
 
 async function init() {
+  log("Environment:", ENV.mode);
+
   const data = await fetchProducts();
   state.products = data.products || [];
 
   initOffers();
-
-  state.audit = load(StorageKeys.AUDIT, []);
-  state.status = load(StorageKeys.STATUS, {});
-
   updateStatusFromOffers();
   initAdminEntry();
 

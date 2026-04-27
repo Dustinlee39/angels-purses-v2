@@ -1,7 +1,4 @@
-import { safeImage } from './images.js';
-import { batchRender } from './renderQueue.js';
-import { getStatus } from './productStatus.js';
-import { isLocked } from './lock.js';
+import { setCache, getCache } from './cache.js';
 
 export function renderGrid(products, onSelect) {
   const grid = document.getElementById('grid');
@@ -9,29 +6,31 @@ export function renderGrid(products, onSelect) {
 
   grid.innerHTML = '';
 
-  batchRender(products, (p) => {
+  const fragment = document.createDocumentFragment();
+
+  products.forEach(p => {
     if (!p?.name) return;
 
-    const status = getStatus(p.id);
-    const locked = isLocked(p.id);
+    let card = getCache(p.id);
 
-    const card = document.createElement('div');
-    card.className = 'card';
+    if (!card) {
+      card = document.createElement('div');
+      card.className = 'card';
 
-    card.style.opacity = locked ? '0.55' : '1';
-    card.style.filter = status === "sold" ? "grayscale(1)" : "none";
-    card.style.pointerEvents = status === "sold" ? "none" : "auto";
+      card.innerHTML = `
+        <img src="${p.image}" loading="lazy"/>
+        <div class="card-body">
+          <h3>${p.name}</h3>
+          <p>${p.description || ''}</p>
+        </div>
+      `;
 
-    card.innerHTML = `
-      <div class="status">${status}</div>
-      <img src="${safeImage(p.image)}" loading="lazy"/>
-      <div class="card-body">
-        <h3>${p.name}</h3>
-        <p>${p.description || ''}</p>
-      </div>
-    `;
+      card.onclick = () => onSelect(p);
+      setCache(p.id, card);
+    }
 
-    card.onclick = () => onSelect(p);
-    grid.appendChild(card);
+    fragment.appendChild(card);
   });
+
+  grid.appendChild(fragment);
 }

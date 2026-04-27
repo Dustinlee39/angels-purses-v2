@@ -1,3 +1,5 @@
+import { ENV } from '../core/env.js';
+
 const KEYS = {
   OFFERS: "ap_offers_v1",
   AUDIT: "ap_audit_v1",
@@ -5,12 +7,20 @@ const KEYS = {
 };
 
 export function save(key, data) {
-  localStorage.setItem(key, JSON.stringify(data));
+  if (ENV.mode === "production") {
+    localStorage.setItem(key, JSON.stringify(data));
+  } else {
+    sessionStorage.setItem(key, JSON.stringify(data));
+  }
 }
 
 export function load(key, fallback = []) {
   try {
-    return JSON.parse(localStorage.getItem(key)) || fallback;
+    const raw = ENV.mode === "production"
+      ? localStorage.getItem(key)
+      : sessionStorage.getItem(key);
+
+    return JSON.parse(raw) || fallback;
   } catch {
     return fallback;
   }
