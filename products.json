@@ -1,0 +1,100 @@
+{
+  "products": [
+    {
+      "id": "purse1",
+      "name": "Golden Hour Tote",
+      "description": "A structured tote in warm beige/tan tones with a top-handle design. Clean lines and neutral styling for everyday use.",
+      "alt": "Structured beige tan tote bag with top handles",
+      "tags": ["tote", "beige", "structured", "top-handle", "everyday", "neutral"],
+      "image": "images/purse1.jpg"
+    },
+    {
+      "id": "purse2",
+      "name": "Midnight Mini Crossbody",
+      "description": "Compact navy crossbody with a structured box shape and front clasp closure, suited for evening use.",
+      "alt": "Small structured navy blue crossbody bag with clasp closure",
+      "tags": ["crossbody", "mini", "navy", "evening", "structured"],
+      "image": "images/purse2.jpg"
+    },
+    {
+      "id": "purse3",
+      "name": "Blush Quilted Clutch",
+      "description": "Blush quilted clutch with chain strap detail and a soft luxury-inspired finish.",
+      "alt": "Blush pink quilted bag with chain strap detail",
+      "tags": ["quilted", "blush", "clutch", "chain", "evening"],
+      "image": "images/purse3.jpg"
+    },
+    {
+      "id": "purse4",
+      "name": "Cognac Bucket Bag",
+      "description": "Cognac brown bucket bag with drawstring top and relaxed silhouette.",
+      "alt": "Cognac brown bucket bag with drawstring top",
+      "tags": ["bucket", "cognac", "brown", "slouchy"],
+      "image": "images/purse4.jpg"
+    },
+    {
+      "id": "purse5",
+      "name": "Ivory Chain Shoulder Bag",
+      "description": "Structured ivory shoulder bag with gold chain strap and classic styling.",
+      "alt": "Ivory off-white shoulder bag with gold chain strap",
+      "tags": ["shoulder", "ivory", "chain", "classic"],
+      "image": "images/purse5.jpg"
+    },
+    {
+      "id": "purse6",
+      "name": "Emerald City Satchel",
+      "description": "Dark green structured satchel with dual handles and professional design.",
+      "alt": "Dark green structured satchel with dual top handles",
+      "tags": ["satchel", "green", "structured", "professional"],
+      "image": "images/purse6.jpg"
+    },
+    {
+      "id": "purse7",
+      "name": "Caramel Woven Tote",
+      "description": "Large woven caramel tote with textured exterior and roomy interior.",
+      "alt": "Large caramel tan woven tote bag",
+      "tags": ["tote", "woven", "caramel", "large"],
+      "image": "images/purse7.jpg"
+    },
+    {
+      "id": "purse8",
+      "name": "Noir Envelope Clutch",
+      "description": "Minimal black envelope clutch with fold-over closure for formal use.",
+      "alt": "Black envelope clutch with fold-over flap",
+      "tags": ["clutch", "black", "formal", "minimal"],
+      "image": "images/purse8.jpg"
+    },
+    {
+      "id": "purse9",
+      "name": "Rose Gold Zip-Around",
+      "description": "Rose-toned zip-around bag with rounded silhouette and modern finish.",
+      "alt": "Rose gold pink zip-around bag",
+      "tags": ["zip-around", "rose", "modern", "rounded"],
+      "image": "images/purse9.jpg"
+    },
+    {
+      "id": "purse10",
+      "name": "Dusty Mauve Hobo",
+      "description": "Soft slouchy mauve hobo bag with relaxed crescent shape.",
+      "alt": "Dusty mauve slouchy hobo bag",
+      "tags": ["hobo", "mauve", "slouchy", "casual"],
+      "image": "images/purse10.jpg"
+    },
+    {
+      "id": "purse11",
+      "name": "Tortoise Frame Bag",
+      "description": "Structured bag with tortoise-shell frame and vintage styling.",
+      "alt": "Structured bag with tortoise shell frame",
+      "tags": ["frame", "tortoise", "vintage", "structured"],
+      "image": "images/purse11.jpg"
+    },
+    {
+      "id": "purse12",
+      "name": "Champagne Flap Bag",
+      "description": "Cream champagne flap bag with textured spotted finish.",
+      "alt": "Champagne cream flap bag with textured pattern",
+      "tags": ["flap", "champagne", "cream", "textured"],
+      "image": "images/purse12.jpg"
+    }
+  ]
+}
