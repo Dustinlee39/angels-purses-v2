@@ -5,6 +5,7 @@ import { openModal } from './ui/modal.js';
 import { bindOfferForm } from './ui/form.js';
 import { initOffers } from './ui/offers.js';
 import { updateStatusFromOffers } from './ui/statusEngine.js';
+import { logEvent } from './ui/audit.js';
 
 async function init() {
   const data = await fetchProducts();
@@ -17,10 +18,11 @@ async function init() {
   renderGrid(state.products, (p) => {
     state.selectedProduct = p;
     openModal(p);
+    logEvent("PRODUCT_VIEW", p);
   });
 
   bindOfferForm((offer) => {
-    console.log('Offer:', offer);
+    logEvent("OFFER_SUBMITTED", offer);
   });
 }
 

@@ -7,10 +7,13 @@ export function initOffers() {
 }
 
 export function addOffer(offer) {
-  state.offers.push({
+  const enriched = {
     ...offer,
-    id: Date.now()
-  });
+    id: Date.now(),
+    status: "pending"
+  };
+
+  state.offers.push(enriched);
 
   if (offer.productId) {
     lockProduct(offer.productId);

@@ -18,8 +18,9 @@ export function renderGrid(products, onSelect) {
     const card = document.createElement('div');
     card.className = 'card';
 
-    card.style.opacity = locked ? '0.6' : '1';
-    card.style.pointerEvents = locked ? 'none' : 'auto';
+    card.style.opacity = locked ? '0.55' : '1';
+    card.style.filter = status === "sold" ? "grayscale(1)" : "none";
+    card.style.pointerEvents = status === "sold" ? "none" : "auto";
 
     card.innerHTML = `
       <div class="status">${status}</div>
