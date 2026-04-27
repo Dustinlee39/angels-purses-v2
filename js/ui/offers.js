@@ -22,3 +22,9 @@ export function addOffer(offer) {
 
   syncAll();
 }
+
+import { saveSnapshot } from '../core/rollback.js';
+
+export function snapshotState(state) {
+  saveSnapshot(state);
+}

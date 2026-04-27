@@ -32,3 +32,7 @@ async function init() {
 }
 
 init();
+
+import { VERSION } from './core/version.js';
+
+console.log("Build:", VERSION.label, VERSION.build);
