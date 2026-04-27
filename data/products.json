@@ -1,0 +1,16 @@
+{ "products": [
+  {
+    "id": 1,
+    "name": "Vintage Bag",
+    "description": "Lightly used designer purse.",
+    "image": "./assets/images/products/purse1.jpg",
+    "alt": "bag"
+  },
+  {
+    "id": 2,
+    "name": "Classic Tote",
+    "description": "Everyday neutral tote.",
+    "image": "./assets/images/products/purse2.jpg",
+    "alt": "tote"
+  }
+]}
